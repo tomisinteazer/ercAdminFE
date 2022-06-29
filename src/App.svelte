@@ -6,11 +6,11 @@
 
 <section class="text-gray-600 body-font">
   <div class=" mx-auto flex px-5 py-24 items-center justify-center flex-col">
-    <div class="text-center lg:w-5/6 w-full">
+    <div class=" lg:w-5/6 w-full">
       <div class="my-8">
         <Counter bind:increment id="0" />
       </div>
-      <div class="flex justify-center">
+      <div class="flex justify-center text-center">
         <button
           class="inline-flex text-white bg-green-600 border-0 py-2 px-6 focus:outline-none hover:bg-green-900 rounded text-lg"
           on:click={increment}>Button</button
