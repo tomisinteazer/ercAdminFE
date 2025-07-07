@@ -10,7 +10,7 @@
   let image = "";
   $: addedTokens = [];
   async function addNewToken() {
-    let r = await fetch("https://nest-tokens-api.herokuapp.com/erc-tokens", {
+    let r = await fetch("https://erc20api.vercel.app/erc-tokens", {
       method: "POST",
       body: JSON.stringify({ name, contract, short, image }),
       headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -26,7 +26,7 @@
 
   async function getTokens() {
     let Tokens = await fetch(
-      "https://nest-tokens-api.herokuapp.com/erc-tokens",
+      "https://erc20api.vercel.app/erc-tokens",
       {
         method: "GET",
         headers: { "Content-type": "application/json; charset=UTF-8" },
@@ -38,7 +38,7 @@
     return res.ephemerals;
   }
   async function remToken(id) {
-    let r = await fetch("https://nest-tokens-api.herokuapp.com/erc-tokens", {
+    let r = await fetch("https://erc20api.vercel.app/erc-tokens", {
       method: "DELETE",
       body: JSON.stringify({ id }),
       headers: { "Content-type": "application/json; charset=UTF-8" },
